@@ -1,0 +1,61 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #fcf6bd;
+}
+.row {
+	margin-top: 15vh;
+}
+h1 {
+	font-family: 'Bungee Shade', cursive;
+	color: #616161;
+	text-align: center;
+}
+h2 {
+	margin-top: 0;
+	font-size: 30px;
+	color: lightgray;
+	font-family: 'Montserrat', sans-serif;
+}
+.fixed-contact {
+	position: fixed;
+	left: 23px;
+	bottom: 23px;
+	padding-top: 15px;
+	margin-bottom: 0;
+	z-index: 997;
+}
+
+.pulse::before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: inherit;
+	border-radius: inherit;
+	-webkit-transition: opacity .3s, -webkit-transform .3s;
+	transition: opacity .3s, -webkit-transform .3s;
+	transition: opacity .3s, transform .3s;
+	transition: opacity .3s, transform .3s, -webkit-transform .3s;
+	-webkit-animation: pulse-animation 4s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+	animation: pulse-animation 4s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+	z-index: -1;
+}
+input:not([type]) {
+	margin: 0 0 15px 0;
+}
+button {
+	margin-right: 5px;
+}
+
+.input-field {
+}
+
+/* label underline focus color */
+.input-field input[type=text]:focus,
+.materialize-textarea:focus:not([readonly]) {
+	border-bottom: 1px solid #e0e0e0 !important;
+	box-shadow: 0 1px 0 0 #e0e0e0 !important;
+}
